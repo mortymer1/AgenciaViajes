@@ -2,6 +2,9 @@
 
 Este proyecto **AgenciaViajes** es una aplicación web diseñada para facilitar la reserva de viajes, que incluye la gestión de vuelos, hoteles y reservas. El proyecto está compuesto por un **frontend en Angular** y varios **microservicios en Spring Boot** que se comunican con una base de datos MySQL.
 
+![image](https://github.com/user-attachments/assets/5fb5b5eb-2964-4acd-8b32-c587980c4359)
+
+
 ## Estructura del proyecto
 
 El repositorio está organizado en las siguientes carpetas:
