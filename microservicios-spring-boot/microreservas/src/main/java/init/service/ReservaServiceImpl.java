@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 import init.dao.ReservaDao;
+import init.model.MisReservasDto;
 import init.model.ReservaDto;
 import init.model.ReservaDtoResumido;
 import init.utilidades.Mapeador;
@@ -106,6 +107,25 @@ public class ReservaServiceImpl implements ReservaService {
 		} catch (Exception e) {
 			return 0;
 		}
+	}
+
+	@Override
+	public List<MisReservasDto> vistaMisReservas(String usuario) {
+		
+		List<ReservaDto> reservasDto = obtenerReservasPorUsuario(usuario);
+		
+		reservasDto.forEach(r -> );
+		
+	    private String destino;
+	    private String hotel;
+	    private int vuelo;
+	    private double precio;
+	    private int plazas;
+	    private int idReserva;
+	    private String fecha;
+		
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

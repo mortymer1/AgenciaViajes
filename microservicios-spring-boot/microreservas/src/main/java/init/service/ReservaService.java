@@ -1,6 +1,8 @@
 package init.service;
 
 import java.util.List;
+
+import init.model.MisReservasDto;
 import init.model.ReservaDto;
 import init.model.ReservaDtoResumido;
 
@@ -17,5 +19,7 @@ public interface ReservaService {
 	int disponibilidadPlazasVuelo(int idVuelo);
 
 	boolean altaReservaResumido(ReservaDtoResumido reservaDto);
+
+	List<MisReservasDto> vistaMisReservas(String usuario);
 
 }

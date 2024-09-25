@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import init.model.MisReservasDto;
 import init.model.ReservaDto;
 import init.model.ReservaDtoResumido;
 import init.service.ReservaService;
@@ -44,5 +46,12 @@ public class ReservaController {
     public List<ReservaDto> obtenerReservasPorUsuario(@PathVariable("usuario") String usuario) {
         return reservaService.obtenerReservasPorUsuario(usuario);
     }
+    
+    @GetMapping(value = "vistaMisReservas/{usuario}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<MisReservasDto> vistaMisReservas(@PathVariable("usuario") String usuario) {
+        return reservaService.vistaMisReservas(usuario);
+    }
+    
+    
 
 }

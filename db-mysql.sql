@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `viajes` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `viajes`;
--- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.32, for Win64 (x86_64)
 --
 -- Host: localhost    Database: viajes
 -- ------------------------------------------------------
--- Server version	8.0.39
+-- Server version	8.0.32
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -91,7 +91,7 @@ CREATE TABLE `reservas` (
   KEY `id_hotel` (`hotel`),
   CONSTRAINT `id_hotel` FOREIGN KEY (`hotel`) REFERENCES `hoteles` (`idHotel`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `id_vuelo` FOREIGN KEY (`vuelo`) REFERENCES `vuelos` (`idvuelo`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,7 +100,7 @@ CREATE TABLE `reservas` (
 
 LOCK TABLES `reservas` WRITE;
 /*!40000 ALTER TABLE `reservas` DISABLE KEYS */;
-INSERT INTO `reservas` VALUES (41,'usuario1',1,1,250,NULL),(42,'usuario2',2,2,350,NULL),(43,'usuario3',3,3,450,NULL),(44,'usuario1',4,4,550,NULL),(45,'usuario2',5,5,650,NULL),(46,'usuario1',1,1,300,NULL),(47,'Juan Perez',1,1,200,2),(48,NULL,5,6,380,2),(49,'client1',5,6,380,2);
+INSERT INTO `reservas` VALUES (41,'usuario1',1,1,250,NULL),(42,'usuario2',2,2,350,NULL),(43,'usuario3',3,3,450,NULL),(44,'usuario1',4,4,550,NULL),(45,'usuario2',5,5,650,NULL),(46,'usuario1',1,1,300,NULL),(47,'Juan Perez',1,1,200,2),(48,NULL,5,6,380,2),(49,'client1',5,6,380,2),(50,'user2',5,16,330,3),(51,'user2',9,17,290,4),(52,'client1',6,9,290,2);
 /*!40000 ALTER TABLE `reservas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,4 +141,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-25  2:49:56
+-- Dump completed on 2024-09-25 13:47:10
