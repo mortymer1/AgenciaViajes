@@ -1,0 +1,10 @@
+/* Estilo para deshabilitar el efecto hover y hacer que el botón no sea clicable */
+.disabled-link {
+    pointer-events: none;  /* Desactiva los clics */
+    cursor: not-allowed;   /* Cambia el cursor a no permitido */
+    color: gray;           /* Cambia el color del texto para indicar que está deshabilitado */
+  }
+  
+  .disabled-link:hover {
+    color: gray; /* Si está deshabilitado, no cambia el color al hover */
+  }

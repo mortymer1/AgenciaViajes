@@ -1,0 +1,63 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card p-4">
+                <h2 class="text-center font-weight-bold mb-4">Datos de reserva</h2>
+
+                <form [formGroup]="reservarForm">
+                    <!-- Campo Destino con Desplegable -->
+                    <div class="form-group">
+                        <label for="destino">Destino:</label>
+                        <select id="destino" class="form-control" formControlName="destino">
+                            <option value="">Seleccione un destino</option>
+                            <option *ngFor="let destino of destinos" [value]="destino">{{ destino }}</option>
+                        </select>
+                    </div>
+                
+                    <!-- Campo Hotel con Desplegable dinámico según el destino seleccionado -->
+                    <div class="form-group">
+                        <label for="hotel">Hotel:</label>
+                        <select id="hotel" class="form-control" formControlName="hotel">
+                            <option value="">Seleccione un hotel</option>
+                            <option *ngFor="let hotel of hoteles" [value]="hotel.nombre">{{ hotel.nombre }}</option>
+                        </select>
+                    </div>
+                
+                    <!-- Campo Personas -->
+                    <div class="form-group">
+                        <label for="personas">Personas:</label>
+                        <select id="personas" class="form-control" formControlName="personas">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                
+                    <!-- Mostrar las tarjetas de vuelos disponibles -->
+                    <div class="row mt-4">
+                        <div class="col-md-4" *ngFor="let vuelo of vuelos">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ vuelo.company }}</h5>
+                                    <p class="card-text">Fecha: {{ vuelo.fecha }}</p>
+                                    <p class="card-text">Precio: {{ vuelo.precio | number:'1.2-2' }} €</p>
+                                    <p class="card-text">Plazas disponibles: {{ vuelo.plazas }}</p>
+                                    <button class="btn btn-primary"
+                                        (click)="seleccionarVuelo(vuelo.idvuelo)">Seleccionar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Botón Reservar -->
+                    <div class="text-center mt-4">
+                        <button type="button" class="btn btn-primary btn-block"  (click)="onReservar()">
+                          Reservar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

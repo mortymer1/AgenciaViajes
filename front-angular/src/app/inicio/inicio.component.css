@@ -1,0 +1,4 @@
+.logo {
+    max-width: 30%; /* La imagen nunca será más ancha que el contenedor */
+    height: auto; /* Mantiene la proporción */
+}

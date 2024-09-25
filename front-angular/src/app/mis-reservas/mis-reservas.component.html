@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="card p-4">
+          <h2 class="text-center font-weight-bold mb-4">Reservas de {{ usuario }}</h2>
+          
+          <!-- Añadir table-responsive alrededor de la tabla -->
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Destino</th>
+                  <th>Hotel</th>
+                  <th>Vuelo</th>
+                  <th>Plazas</th>
+                  <th>idReserva</th>
+                  <th>Fecha</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let reserva of reservas">
+                  <td>{{ reserva.destino }}</td>
+                  <td>{{ reserva.hotel }}</td>
+                  <td>{{ reserva.vuelo }}</td>
+                  <td>{{ reserva.plazas }}</td>
+                  <td>{{ reserva.idreserva }}</td>
+                  <td>{{ reserva.fecha }}</td>
+                  <td>{{ reserva.precio | currency }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
